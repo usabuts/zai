@@ -5,7 +5,7 @@ description: Explore the ZAI starter examples and draft an implementation plan u
 
 # ZAI project guide
 
-This repository is an educational starter, not a deployed application or cloud provisioning service. Its MCP tools use a bundled catalog and produce plans without creating files or resources.
+This repository is an educational starter, not a deployed application or cloud provisioning service. Its MCP tools use a bundled catalog and produce plans without creating files or resources..
 
 ## Explore and plan
 
