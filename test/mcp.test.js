@@ -19,7 +19,7 @@ async function exercise(transport) {
     assert(catalog.structuredContent.examples.some(x => x.id === 'task-api'));
     const detail = await client.callTool({ name: 'zai_get_example', arguments: { exampleId: 'task-api' } });
     assert.equal(detail.structuredContent.example.id, 'task-api');
-    const plan = await client.callTool({ name: 'zai_create_plan', arguments: { exampleId: 'task-api', projectName: '任务管理', goal: 'A team task API' } });
+    const plan = await client.callTool({ name: 'zai_create_plan', arguments: { exampleId: 'task-api', projectName: '任务管理', goal: '团队任务 API' } });
     assert.equal(plan.structuredContent.status, 'proposed');
     assert.equal(plan.structuredContent.projectName, '任务管理');
     assert.equal(plan.structuredContent.steps.length, detail.structuredContent.example.steps.length);
@@ -32,16 +32,16 @@ async function exercise(transport) {
     assert(resources.resources.some(x => x.uri === 'zai://guide/getting-started'));
     const resource = await client.readResource({ uri: 'zai://guide/getting-started' });
     assert.equal(resource.contents[0].mimeType, 'text/markdown');
-    const prompt = await client.getPrompt({ name: 'zai-plan-project', arguments: { goal: 'A local notes app' } });
+    const prompt = await client.getPrompt({ name: 'zai-plan-project', arguments: { goal: '本地笔记应用' } });
     assert.equal(prompt.messages[0].role, 'user');
   } finally { await client.close(); }
 }
 
-test('stdio: discovery, valid/invalid calls, resources and prompts', async () => {
+test('stdio：能力发现、正常与错误调用、资源和提示模板', async () => {
   await exercise(new StdioClientTransport({ command: process.execPath, args: [fileURLToPath(new URL('../tools/mcp/stdio.js', import.meta.url))] }));
 });
 
-test('HTTP: same protocol behavior, malformed requests, and local origin restrictions', async () => {
+test('HTTP：协议行为、无效请求和本地来源限制', async () => {
   const listener = await startHttpServer(0);
   const base = `http://127.0.0.1:${listener.address().port}`;
   try {
@@ -50,7 +50,7 @@ test('HTTP: same protocol behavior, malformed requests, and local origin restric
     await exercise(new StreamableHTTPClientTransport(new URL(`${base}/mcp`)));
     const blocked = await fetch(`${base}/mcp`, { method: 'POST', headers: { Origin: 'https://untrusted.example', 'Content-Type': 'application/json' }, body: '{}' });
     assert.equal(blocked.status, 403);
-    // Node fetch normalizes Host; use the HTTP client to exercise the actual wire header.
+    // Node fetch 会规范化 Host；使用 HTTP 客户端验证实际发送的请求头。
     const invalidHostStatus = await new Promise((resolve, reject) => {
       const request = get(`${base}/health`, { headers: { Host: 'untrusted.example' } }, response => {
         response.resume();

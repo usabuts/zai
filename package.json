@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Stripe-style example plugins, shared skills and a runnable MCP server",
+  "description": "参照 Stripe 结构的示例插件、共享 Skill 和可运行的 MCP 服务",
   "engines": { "node": ">=22" },
   "scripts": {
     "mcp:stdio": "node tools/mcp/stdio.js",

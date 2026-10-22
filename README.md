@@ -1,5 +1,7 @@
 # ZAI · Plugin / Skill / MCP 示例
 
+项目默认使用简体中文；代码标识符、协议字段以及第三方 Schema 和许可证保留原文。后续维护约定见 [AGENTS.md](AGENTS.md)。
+
 参照 [Stripe AI](https://github.com/stripe/ai) 的组织方式，为 Claude Code、Codex、Cursor 和 Agent Plugins 1.0 提供同一套示例能力。
 
 这是一个可运行的教学项目：列出内置项目模板、读取模板详情、生成实施计划。它不调用付费模型、不接入 Stripe、不创建云资源，也不生成应用代码。生成计划后，你可以另行要求 Agent 按计划实现应用。

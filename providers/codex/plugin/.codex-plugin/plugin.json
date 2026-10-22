@@ -1,7 +1,7 @@
 {
   "name": "zai",
   "version": "0.1.0",
-  "description": "Explore ZAI examples and draft implementation plans with shared skills and MCP tools.",
+  "description": "通过共享 Skill 和 MCP 工具浏览 ZAI 示例并起草实施计划。",
   "author": {
     "name": "usabuts",
     "url": "https://github.com/usabuts"
@@ -11,10 +11,10 @@
   "skills": "./skills",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "ZAI Examples",
-    "shortDescription": "Explore starter templates and draft project plans",
+    "displayName": "ZAI 示例",
+    "shortDescription": "浏览入门模板并起草项目实施计划",
     "defaultPrompt": [
-      "Use ZAI to plan a task API called team-tasks"
+      "用 ZAI 为名为 team-tasks 的任务 API 制定实施计划"
     ]
   }
 }

@@ -1,13 +1,13 @@
 {
   "name": "zai-plugins",
-  "description": "Runnable ZAI examples for shared skills and MCP tools.",
+  "description": "包含共享 Skill 和 MCP 工具的可运行 ZAI 示例。",
   "owner": {
     "name": "usabuts"
   },
   "plugins": [
     {
       "name": "zai",
-      "description": "Explore ZAI examples and draft implementation plans with shared skills and MCP tools.",
+      "description": "通过共享 Skill 和 MCP 工具浏览 ZAI 示例并起草实施计划。",
       "version": "0.1.0",
       "source": "./providers/claude/plugin"
     }

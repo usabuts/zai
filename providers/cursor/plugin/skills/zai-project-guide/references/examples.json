@@ -1,18 +1,45 @@
 [
   {
     "id": "task-api",
-    "title": "Task API",
-    "description": "A small HTTP API for listing, creating and completing tasks.",
-    "stack": ["Node.js", "HTTP", "SQLite"],
-    "steps": ["Define task fields and API request/response contracts", "Implement persistence and input validation", "Implement list, create and complete operations", "Document local startup and API examples"],
-    "checks": ["Reject invalid task titles", "Persist tasks across restarts", "Handle unknown task IDs", "Test create then read and complete flows"]
+    "title": "任务 API",
+    "description": "用于查询、创建和完成任务的小型 HTTP API。",
+    "stack": [
+      "Node.js",
+      "HTTP",
+      "SQLite"
+    ],
+    "steps": [
+      "定义任务字段以及 API 请求和响应约定",
+      "实现持久化存储与输入校验",
+      "实现查询、创建和完成任务的操作",
+      "编写本地启动说明与 API 使用示例"
+    ],
+    "checks": [
+      "拒绝无效的任务标题",
+      "重启后保留任务数据",
+      "处理不存在的任务 ID",
+      "测试创建、读取和完成任务的完整流程"
+    ]
   },
   {
     "id": "notes-cli",
-    "title": "Local notes CLI",
-    "description": "A command-line application for local notes without cloud services.",
-    "stack": ["Node.js", "Filesystem"],
-    "steps": ["Define add, list and show commands", "Choose an explicit local storage directory", "Implement validated note persistence", "Document usage and backup behavior"],
-    "checks": ["Reject path traversal in note IDs", "Preserve existing notes", "Report unknown notes clearly", "Test Unicode titles and content"]
+    "title": "本地笔记命令行工具",
+    "description": "无需云服务的本地笔记命令行应用。",
+    "stack": [
+      "Node.js",
+      "文件系统"
+    ],
+    "steps": [
+      "定义 add、list 和 show 命令",
+      "明确指定本地存储目录",
+      "实现带输入校验的笔记持久化存储",
+      "编写使用说明与备份规则"
+    ],
+    "checks": [
+      "拒绝笔记 ID 中的路径穿越内容",
+      "保留已有笔记",
+      "清楚报告不存在的笔记",
+      "测试中文等 Unicode 标题和内容"
+    ]
   }
 ]

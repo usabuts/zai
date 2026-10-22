@@ -1,7 +1,7 @@
 {
   "name": "zai-plugins",
   "interface": {
-    "displayName": "ZAI examples"
+    "displayName": "ZAI 示例"
   },
   "plugins": [
     {

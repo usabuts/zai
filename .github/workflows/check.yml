@@ -1,4 +1,4 @@
-name: Validate ZAI examples
+name: 验证 ZAI 示例
 on:
   push:
   pull_request:

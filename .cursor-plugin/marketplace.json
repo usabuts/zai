@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "zai",
-      "description": "Explore ZAI examples and draft implementation plans with shared skills and MCP tools.",
+      "description": "通过共享 Skill 和 MCP 工具浏览 ZAI 示例并起草实施计划。",
       "source": "./providers/cursor/plugin"
     }
   ]

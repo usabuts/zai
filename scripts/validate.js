@@ -47,4 +47,4 @@ for (const manifest of ['.agents/plugins/marketplace.json', '.claude-plugin/mark
     await readdir(path.join(root, source));
   }
 }
-console.log('Portable schemas, provider wiring, skill references and marketplace paths are valid.');
+console.log('通用 Schema、客户端配置、Skill 引用和市场路径校验通过。');
