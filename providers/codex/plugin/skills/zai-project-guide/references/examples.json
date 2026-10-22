@@ -1,0 +1,18 @@
+[
+  {
+    "id": "task-api",
+    "title": "Task API",
+    "description": "A small HTTP API for listing, creating and completing tasks.",
+    "stack": ["Node.js", "HTTP", "SQLite"],
+    "steps": ["Define task fields and API request/response contracts", "Implement persistence and input validation", "Implement list, create and complete operations", "Document local startup and API examples"],
+    "checks": ["Reject invalid task titles", "Persist tasks across restarts", "Handle unknown task IDs", "Test create then read and complete flows"]
+  },
+  {
+    "id": "notes-cli",
+    "title": "Local notes CLI",
+    "description": "A command-line application for local notes without cloud services.",
+    "stack": ["Node.js", "Filesystem"],
+    "steps": ["Define add, list and show commands", "Choose an explicit local storage directory", "Implement validated note persistence", "Document usage and backup behavior"],
+    "checks": ["Reject path traversal in note IDs", "Preserve existing notes", "Report unknown notes clearly", "Test Unicode titles and content"]
+  }
+]

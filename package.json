@@ -1,0 +1,26 @@
+{
+  "name": "zai-agent-examples",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Stripe-style example plugins, shared skills and a runnable MCP server",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "mcp:stdio": "node tools/mcp/stdio.js",
+    "mcp:http": "node tools/mcp/http.js",
+    "smoke": "node scripts/smoke.js",
+    "sync": "node scripts/sync-plugins.js",
+    "sync:check": "node scripts/sync-plugins.js --check",
+    "validate": "node scripts/validate.js",
+    "test": "node --test",
+    "check": "npm run sync:check && npm run validate && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.28.0",
+    "express": "^5.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "zai-plugins",
+  "interface": {
+    "displayName": "ZAI examples"
+  },
+  "plugins": [
+    {
+      "name": "zai",
+      "source": {
+        "source": "local",
+        "path": "./providers/codex/plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

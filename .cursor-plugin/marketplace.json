@@ -1,0 +1,13 @@
+{
+  "name": "zai-plugins",
+  "owner": {
+    "name": "usabuts"
+  },
+  "plugins": [
+    {
+      "name": "zai",
+      "description": "Explore ZAI examples and draft implementation plans with shared skills and MCP tools.",
+      "source": "./providers/cursor/plugin"
+    }
+  ]
+}

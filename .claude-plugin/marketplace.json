@@ -1,0 +1,15 @@
+{
+  "name": "zai-plugins",
+  "description": "Runnable ZAI examples for shared skills and MCP tools.",
+  "owner": {
+    "name": "usabuts"
+  },
+  "plugins": [
+    {
+      "name": "zai",
+      "description": "Explore ZAI examples and draft implementation plans with shared skills and MCP tools.",
+      "version": "0.1.0",
+      "source": "./providers/claude/plugin"
+    }
+  ]
+}

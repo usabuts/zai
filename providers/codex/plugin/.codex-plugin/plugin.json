@@ -1,0 +1,20 @@
+{
+  "name": "zai",
+  "version": "0.1.0",
+  "description": "Explore ZAI examples and draft implementation plans with shared skills and MCP tools.",
+  "author": {
+    "name": "usabuts",
+    "url": "https://github.com/usabuts"
+  },
+  "homepage": "https://github.com/usabuts/zai",
+  "repository": "https://github.com/usabuts/zai",
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "ZAI Examples",
+    "shortDescription": "Explore starter templates and draft project plans",
+    "defaultPrompt": [
+      "Use ZAI to plan a task API called team-tasks"
+    ]
+  }
+}
